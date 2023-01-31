@@ -19,14 +19,14 @@
     <!-- NAVBAR START -->
     <nav class="navbar">
       <!-- navbar left -->
-      <div class="left">
-        <span class="material-icons"> menu </span>
-
+      <div class="navbar-left">
+        <span class="material-icons menu icon-hover" tabindex="1"> menu </span>
         <svg
           viewBox="0 0 90 20"
           preserveAspectRatio="xMidYMid meet"
           focusable="false"
           class="style-scope yt-icon"
+          tabindex="2"
         >
           <g
             viewBox="0 0 90 20"
@@ -81,19 +81,35 @@
         </svg>
       </div>
       <!-- navbar middle -->
-      <div class="middle">
-        <form action="">
+      <div class="navbar-middle">
+        <form class="search-form" action="input">
           <input
             type="search"
             name="search-bar"
             id="search-bar"
             placeholder="Search"
+            tabindex="3"
           />
-          <button></button>
+          <button class="search-btn" tabindex="4">
+            <span class="material-icons">search</span>
+          </button>
+          <span class="material-icons mic icon-hover" tabindex="5">mic</span>
         </form>
       </div>
       <!-- navbar right -->
-      <div class="right"></div>
+      <div class="navbar-right">
+        <ul class="navbar-right-list" style="list-style-type: none">
+          <li>
+            <span class="material-icons more" tabindex="6">more_vert</span>
+          </li>
+          <li>
+            <button tabindex="7" class="signin">
+              <span class="material-icons account"> account_circle </span>
+              <i>Sign in</i>
+            </button>
+          </li>
+        </ul>
+      </div>
     </nav>
     <!-- NAVBAR END -->
 
