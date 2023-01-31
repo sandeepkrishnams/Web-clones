@@ -40,6 +40,7 @@ button {
 
     --navbar-width: 3.5rem;
     --yt-logo-width: 5.625rem;
+    --navbar-search-section-height: 2.25rem;
 
 }
 
@@ -111,7 +112,7 @@ button {
 
 #search-bar {
     flex: 1;
-    height: 2.6rem;
+    height: var(--navbar-search-section-height);
     border: 1px solid rgba(204, 204, 204, 1);
     background-color: hsl(0, 0%, 100%);
     border-right: none;
@@ -130,14 +131,20 @@ button {
 }
 
 .search-btn {
-    height: 2.6rem;
+    height: var(--navbar-search-section-height);
     width: 4rem;
+    display: flex;
+    place-items: center;
     border: 1px solid rgba(204, 204, 204, 1);
     background-color: var(--clr-navbar-search-icon-bg);
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-    padding: 1px 4px;
+    padding: 0px 4px;
     margin-right: 2px;
+}
+
+.search {
+    padding-block: 0px;
 }
 
 .mic {
