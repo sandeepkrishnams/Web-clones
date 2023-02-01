@@ -178,7 +178,7 @@ button {
 .signin {
     display: flex;
     flex-direction: row;
-    width: 100px;
+    width: 110px;
     height: var(--navbar-search-section-height);
     align-items: center;
     padding-inline: .5rem;
@@ -195,7 +195,7 @@ button {
     background-color: none;
 }
 
-.signin i {
+.signtext {
     font-size: .9rem;
     font-style: normal;
     letter-spacing: 1px;
@@ -203,11 +203,12 @@ button {
     font-weight: 500;
 }
 
+
 /* ----------navbar-end---------- */
 
 /* ----------hero-section-starts-------- */
 
-/* sidebar starts */
+/* ----------sidebar starts------------- */
 
 .hero {
     height: var(--hero-section-height);
@@ -226,21 +227,29 @@ button {
 }
 
 /* -----------scrollbar-webkit----------- */
+@supports selector(::-webkit-scrollbar) {
+    .sidebar::-webkit-scrollbar {
+        width: .5rem;
+    }
 
-.sidebar::-webkit-scrollbar {
-    width: .5rem;
+
+    .sidebar::-webkit-scrollbar-track {
+        background-color: whitesmoke;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+        background-color: var(--clr-secondary-bg) red;
+    }
 }
 
-
-.sidebar::-webkit-scrollbar-track {
-    background-color: whitesmoke;
-}
-
-.sidebar::-webkit-scrollbar-thumb {
-    background-color: var(--clr-secondary-bg);
+@supports (-moz-appearance:none) {
+    .sidebar {
+        border-right: 1px solid whitesmoke;
+    }
 }
 
 /* -----------scrollbar-webkit----------- */
+
 
 .sidebar-section {
     margin: .75rem;
@@ -265,13 +274,81 @@ button {
 }
 
 .sidebar hr {
-    color: rgba(210, 210, 210, 0.84);
-    height: 2px;
+    color: rgba(229, 229, 229, 0.5);
+    height: 1px;
 }
 
 aside {
     height: var(--hero-section-height);
     flex: 1;
+}
+
+/* ----------sidebar starts------------- */
+.yt-grid {
+    overflow-y: scroll;
+}
+
+.recommended {
+    margin-top: 2rem;
+}
+
+.recommended h1 {
+    margin-inline: 2em;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.tumbnail-container img {
+    width: 100%;
+    aspect-ratio: 16 9;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: .5em;
+}
+
+
+.video-details {
+    display: flex;
+    word-wrap: break-word;
+    align-items: flex-start;
+}
+
+.video-profile-logo {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 25px;
+    margin: .5rem;
+}
+
+.video-dec {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-title {
+    color: black;
+    font-size: 0.875em;
+    margin-bottom: .45em;
+}
+
+.light {
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.light>span {
+    padding-inline: .2rem;
+    line-height: 1;
+}
+
+aside hr {
+    border: 2px solid rgba(181, 180, 180, 0.503);
 }
 
 /* ----------hero-section-ends-------- */
