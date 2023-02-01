@@ -40,7 +40,7 @@ button {
 
     --navbar-width: 3.5rem;
     --yt-logo-width: 5.625rem;
-    --navbar-search-section-height: 2.25rem;
+    --navbar-search-section-height: 2.45rem;
 
 }
 
@@ -175,6 +175,7 @@ button {
     display: flex;
     flex-direction: row;
     width: 100px;
+    height: var(--navbar-search-section-height);
     align-items: center;
     padding-inline: .5rem;
     background-color: var(--clr-primary-bg);
