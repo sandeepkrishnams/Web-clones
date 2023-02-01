@@ -352,3 +352,45 @@ aside hr {
 }
 
 /* ----------hero-section-ends-------- */
+
+
+/* ---------media-query-------- */
+
+@media screen and (max-width:480px) {
+
+    .sidebar,
+    #search-bar {
+        display: none;
+    }
+
+    #mic-icon {
+        display: none;
+    }
+
+    .search-btn {
+        background-color: transparent;
+        width: min-content;
+        height: min-content;
+        border: none;
+        margin-left: auto;
+        align-self: center;
+    }
+
+    .search {
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        color: black;
+        font-weight: 600;
+    }
+
+    .more {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width : 1200px) {
+    .sidebar {
+        display: none;
+    }
+}
