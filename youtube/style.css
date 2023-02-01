@@ -13,6 +13,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--clr-primary-bg);
+    line-height: 1.5rem;
 }
 
 img {
@@ -41,6 +42,9 @@ button {
     --navbar-width: 3.5rem;
     --yt-logo-width: 5.625rem;
     --navbar-search-section-height: 2.45rem;
+    --icon-size: 24px;
+    --icon-padding: .5rem;
+    --hero-section-height: calc(100vh - 56px);
 
 }
 
@@ -200,3 +204,74 @@ button {
 }
 
 /* ----------navbar-end---------- */
+
+/* ----------hero-section-starts-------- */
+
+/* sidebar starts */
+
+.hero {
+    height: var(--hero-section-height);
+    display: flex;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 230px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+/* -----------scrollbar-webkit----------- */
+
+.sidebar::-webkit-scrollbar {
+    width: .5rem;
+}
+
+
+.sidebar::-webkit-scrollbar-track {
+    background-color: whitesmoke;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: var(--clr-secondary-bg);
+}
+
+/* -----------scrollbar-webkit----------- */
+
+.sidebar-section {
+    margin: .75rem;
+    font-size: .875rem;
+    font-weight: 400;
+}
+
+.sidebar-category {
+    height: 2.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-category>.material-icons {
+    padding-inline: 1rem;
+}
+
+.sidebar-category:hover {
+    background-color: rgba(247, 243, 243, 0.9);
+    border-radius: 50px;
+}
+
+.sidebar hr {
+    color: rgba(210, 210, 210, 0.84);
+    height: 2px;
+}
+
+aside {
+    height: var(--hero-section-height);
+    flex: 1;
+}
+
+/* ----------hero-section-ends-------- */
