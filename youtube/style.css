@@ -85,8 +85,7 @@ button {
 }
 
 .icon-hover:hover,
-.icon-hover:active,
-.icon-hover:focus {
+.icon-hover:active {
     background-color: var(--clr-navbar-icon-hover-bg);
     border-radius: 50px;
 }
@@ -217,13 +216,7 @@ button {
 }
 
 .sidebar {
-    width: 230px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    overflow-y: scroll;
-    scrollbar-width: none;
+    display: none;
 }
 
 /* -----------scrollbar-webkit----------- */
@@ -351,6 +344,19 @@ aside hr {
     border: 2px solid rgba(181, 180, 180, 0.503);
 }
 
+.show-sidebar {
+    width: 230px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    position: fixed;
+    top: var(--navbar-width);
+    background-color: white;
+}
+
 /* ----------hero-section-ends-------- */
 
 
@@ -387,10 +393,24 @@ aside hr {
     .more {
         padding-left: 0;
     }
+
+    .show-sidebar {
+        display: inline;
+        position: fixed;
+        top: var(--navbar-width);
+        background-color: white;
+    }
 }
 
 @media screen and (max-width : 1200px) {
     .sidebar {
         display: none;
+    }
+
+    .show-sidebar {
+        display: inline;
+        position: fixed;
+        top: var(--navbar-width);
+        background-color: white;
     }
 }
